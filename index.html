@@ -94,6 +94,17 @@
     .chip{ padding:6px 10px; border-radius:999px; background: rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.14); font-size:12px }
     .typing{ border-right: 2px solid var(--accent); white-space:nowrap; overflow:hidden; color: #6ea8fe; font-weight:800; font-style: underline;}
     .hint{ font-size:12px; color:var(--muted); margin-top:6px }
+    
+    /* Allow scrolling on mobile only */
+@media (max-width: 880px){
+  html, body { height: auto; }
+  body{
+    overflow:auto;            /* enable scroll */
+    -webkit-overflow-scrolling: touch; /* smooth iOS scroll */
+  }
+  .wrap{ min-height:auto; padding-bottom:28px; } /* give room for content */
+}
+    
   </style>
 </head>
 <body>
